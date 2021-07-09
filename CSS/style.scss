@@ -1,0 +1,135 @@
+//Primary
+$Brightorange: hsl(31, 77%, 52%);
+$Darkcyan: hsl(184, 100%, 22%);
+$Verydarkcyan: hsl(179, 100%, 13%);
+
+//Neutral
+$Transparentwhite: hsla(0, 0%, 100%, 0.75); //(paragraphs)
+$Verylightgray: hsl(0, 0%, 95%); // (background, headings, buttons)
+
+//Fonts Used:
+//font-family: 'Big Shoulders Display', cursive;
+//'Lexend font-family: Deca', sans-serif;
+
+//CSS RESET
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-size: 15px;
+    background-color: $Verylightgray;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: 420px){
+        flex-direction: column;
+        margin: 5em 0;
+    }
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    height: 465px;
+    width: 300px;
+    padding: 3em;
+}
+
+
+.card1{
+    background-color: $Brightorange;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    @media(max-width: 420px){
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5em;
+    }
+}
+.card2{
+    background-color: $Darkcyan;
+}
+.card3{
+    background-color: $Verydarkcyan;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    @media(max-width: 420px){
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5em;
+    }
+}
+
+.content{
+    h1{
+        color: $Verylightgray;
+        font-family: 'Big Shoulders Display', cursive;
+        margin: 1em 0;
+        text-transform: uppercase;
+        @media(max-width: 420px){
+            margin: 0.5em 0;
+        }
+    }
+    p{
+        color: $Transparentwhite;
+        font-family: 'Lexend Deca', sans-serif;
+        margin-bottom: 5em;
+        @media(max-width: 420px){
+            margin-bottom: em;
+        }
+    }
+}
+
+.btn{
+    background-color: $Verylightgray;
+    padding: 0.5rem 1rem;
+    border: 2px solid $Verylightgray;
+    outline: none;
+    border-radius: 5em;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+    &:hover{
+        background: none;
+        color: white;
+    }
+}
+
+.btn1{
+    color: $Brightorange;
+}
+.btn2{
+    color: $Darkcyan;
+}
+.btn3{
+    color: $Verydarkcyan;
+}
